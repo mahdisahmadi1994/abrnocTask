@@ -62,3 +62,19 @@ To start the server, run the following command in your terminal:
 ```bash
 npm run server
 ```
+### 5. Database Schema
+
+The application uses a PostgreSQL database to store the weather data. The database schema for storing weather data includes the following fields:
+
+- **id** (UUID, primary key): Unique identifier for each weather record.
+- **cityName** (string): The name of the city.
+- **country** (string): The country of the city.
+- **temperature** (float): Current temperature in the city (in Celsius).
+- **description** (string): Weather description (e.g., "clear sky").
+- **humidity** (integer): Humidity percentage in the city.
+- **windSpeed** (float): Wind speed in meters per second.
+- **fetchedAt** (timestamp): Timestamp when the data was fetched from the OpenWeatherMap API.
+- **createdAt** (timestamp): Timestamp when the weather record was created in the database.
+- **updatedAt** (timestamp): Timestamp when the weather record was last updated in the database.
+
+The database schema is managed using **TypeORM**, and the weather data is fetched from the **OpenWeatherMap API** and stored in the PostgreSQL database.
