@@ -29,3 +29,11 @@ This project is a backend application that serves as an intermediary between a c
 ```bash
 git clone https://github.com/mahdisahmadi1994/abrnocTask.git
 cd abrnocTask
+
+### 2. Install dependencies
+
+Run the following command to install all the necessary dependencies:
+
+```bash
+npm install
+
