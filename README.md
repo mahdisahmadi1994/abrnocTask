@@ -78,3 +78,62 @@ The application uses a PostgreSQL database to store the weather data. The databa
 - **updatedAt** (timestamp): Timestamp when the weather record was last updated in the database.
 
 The database schema is managed using **TypeORM**, and the weather data is fetched from the **OpenWeatherMap API** and stored in the PostgreSQL database.
+
+
+### 6. API Endpoints
+
+The application exposes the following RESTful API endpoints:
+
+- **GET /weather**
+  - **Description**: Retrieve all stored weather records from the database.
+  - **Response**: List of weather objects.
+
+- **GET /weather/:id**
+  - **Description**: Retrieve a single weather record by its internal ID.
+  - **Response**: Weather object.
+
+- **POST /weather**
+  - **Description**: Fetch current weather data for a specified city from OpenWeatherMap and store it in the database.
+  - **Request Body**:
+    ```json
+    {
+      "cityName": "London",
+      "country": "UK"
+    }
+    ```
+  - **Response**: The stored weather object.
+
+- **PUT /weather/:id**
+  - **Description**: Update information on an existing weather record in the database.
+  - **Request Body**: Fields to update (e.g., temperature, description).
+  - **Response**: The updated weather object.
+
+- **DELETE /weather/:id**
+  - **Description**: Remove a weather record from the database.
+  - **Response**: Success message or status.
+
+- **GET /weather/latest/:cityName**
+  - **Description**: Retrieve the latest weather data for a specific city.
+  - **Response**: The most recent weather object for the specified city.
+
+### 7. Error Handling
+
+The application implements comprehensive error handling for the following scenarios:
+
+- **Invalid Routes**: Returns a 404 error for undefined endpoints.
+- **Server Errors**: Returns a 500 error for unexpected server issues.
+- **Validation Errors**: Returns a 400 error with validation messages for incorrect or missing data.
+- **External API Errors**: Handles and relays errors from OpenWeatherMap (e.g., invalid city name, API rate limiting).
+
+### 8. Documentation
+
+The API is documented using **Swagger UI**. You can view the interactive API documentation by visiting:
+
+[http://localhost:3333/api-docs]
+
+
+### 9. Version Control
+
+This project is versioned using **Git**. The repository is hosted on GitHub:  
+[https://github.com/mahdisahmadi1994/abrnocTask](https://github.com/mahdisahmadi1994/abrnocTask)
+
