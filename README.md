@@ -35,5 +35,24 @@ cd abrnocTask
 Run the following command to install all the necessary dependencies:
 
 ```bash
-npm install
+npm install -y
 ```
+
+### 3. Set up environment variables
+
+Create a `.env` file in the root directory of the project and add the following variables:
+
+```env
+PORT=3333
+JWT_SECRET=my_jwt_secret
+DB_USER="username"
+DB_HOST="host"
+DB_NAME="dbname"
+DB_PORT=5432
+DB_PASSWORD="password"
+API_KEY= "api_key from OpenWeatherMap API"
+
+REDIS_HOST= "localhost"
+REDIS_PORT= 6379
+```
+
