@@ -98,7 +98,7 @@ The application exposes the following RESTful API endpoints:
     ```json
     {
       "cityName": "London",
-      "country": "UK"
+      
     }
     ```
   - **Response**: The stored weather object.
@@ -129,7 +129,7 @@ The application implements comprehensive error handling for the following scenar
 
 The API is documented using **Swagger UI**. You can view the interactive API documentation by visiting:
 
-[http://localhost:3333/api-docs]
+[http://localhost:3333/api-docs](http://localhost:3333/api-docs)
 
 
 ### 9. Version Control
