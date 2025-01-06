@@ -55,4 +55,10 @@ API_KEY= "api_key from OpenWeatherMap API"
 REDIS_HOST= "localhost"
 REDIS_PORT= 6379
 ```
+### 4. Run the application
 
+To start the server, run the following command in your terminal:
+
+```bash
+npm run server
+```
